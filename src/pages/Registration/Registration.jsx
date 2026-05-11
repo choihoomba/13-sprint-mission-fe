@@ -1,5 +1,5 @@
 import "./Registration.css";
 
 export default function Registration() {
-  return <div></div>;
+  return <div>상품등록페이지</div>;
 }

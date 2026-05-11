@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Items.css";
 import { BASE_URL } from "../../api.js";
+import { useNavigate } from "react-router";
 
 export default function Items() {
   const [products, setProducts] = useState([]);
@@ -19,6 +20,7 @@ export default function Items() {
   );
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -47,7 +49,7 @@ export default function Items() {
             setPageGroup(1);
           }}
         />
-        <button>상품 등록하기</button>
+        <button onClick={() => navigate("/registration")}>상품 등록하기</button>
         <select onChange={(e) => setSort(e.target.value)}>
           <option value="">기본순</option>
           <option value="recent">최신순</option>
