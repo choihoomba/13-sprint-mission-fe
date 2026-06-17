@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 스프린트 미션 - 자유게시판 (Next.js)
 
-## Getting Started
+이전 미션에서 만든 백엔드 API를 활용해 자유게시판을 Next.js로 구현한 프로젝트입니다.
 
-First, run the development server:
+## 🔗 배포 주소
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **웹사이트**: https://one3-sprint-mission-fe-s11u.onrender.com
+- **백엔드**: Render로 배포된 백엔드 API 사용
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ✅ 기본 요구사항
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 공통
 
-## Learn More
+- [x] Github에 스프린트 미션 PR 생성
+- [x] Next.js 사용
 
-To learn more about Next.js, take a look at the following resources:
+### 자유 게시판 페이지
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [x] 드롭다운으로 "최신 순" 정렬
+- [x] 게시글 목록 조회 API(GET)로 데이터 가져오기
+- [x] 게시글 제목 검색 (일부 포함 시 검색)
+- [x] 이미지는 디폴트 이미지로 프론트엔드 처리
+- [x] 닉네임·좋아요 개수는 임의값으로 프론트엔드 처리
+- [x] 베스트 게시글: 최신순 3개 요청으로 구현
+- [x] 게시글 클릭 시 상세 페이지로 이동
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 게시글 등록 & 수정 페이지
 
-## Deploy on Vercel
+- [x] 각 input 필드에 정확한 placeholder 입력
+- [x] 모든 input 값 입력 시 '등록' 버튼 활성화
+- [x] 게시글 생성 API(POST)로 등록
+- [x] '등록' 버튼 클릭 시 상세 페이지로 이동
+- [x] 수정 페이지 UI는 등록 페이지와 동일
+- [x] 게시글 상세 API(PATCH)로 수정
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 게시글 상세 페이지
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [x] 게시글 상세 API(GET)로 데이터 가져오기
+- [x] 게시글 상세 API(DELETE)로 삭제
+- [x] 댓글 input 값 입력 시 '등록' 버튼 활성화
+- [x] 댓글 생성 API(POST)로 등록
+- [x] 댓글 API(PATCH)로 수정
+- [x] 댓글 API(DELETE)로 삭제
+
+---
+
+## 🚀 심화 요구사항
+
+### 공통
+
+- [x] 디자인 시안에 따른 반응형 디자인 구현
+- [ ] (생략 가능) 기존 React 코드를 Next.js로 마이그레이션
